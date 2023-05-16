@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form | home</title>
+  </head>
+
+  <body>
+    <form>
+      <input
+        type="email"
+        value=""
+        class="input"
+        id="textsend"
+        onkeyup="success()"
+        placeholder="Enter email ...."
+        required
+      />
+      <button type="submit" id="button" disabled>Enter</button>
+    </form>
+
+    <script>
+      function success() {
+        if (document.getElementById("textsend").value === "") {
+          document.getElementById("button").disabled = true;
+        } else {
+          document.getElementById("button").disabled = false;
+        }
+      }
+    </script>
+  </body>
+</html>
